@@ -519,7 +519,7 @@ function Presence:get_nvim_socket_paths(on_done)
         }
     elseif self.os.name == "windows" then
         cmd = {
-            "powershell.exe",
+            "pwsh.exe",
             "-Command",
             [[(Get-ChildItem \\.\pipe\).FullName | findstr 'nvim']],
         }
